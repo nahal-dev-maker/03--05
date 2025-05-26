@@ -1,0 +1,36 @@
+﻿@model contactUs.web.ViewModels.FormContactUsViewModel
+
+
+<form asp-controller="Home" asp-action="contactUs" method="post">
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email"/>
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div> <br/>   
+    <div>
+        <label>firstName:</label>
+        <input asp-for="firstName"/>
+        <span class="text-danger" asp-validation-for="firstName"></span>
+    </div>    <br/>
+    <div>
+        <label>LastNAme:</label>
+        <input asp-for="LastName"/>
+        <span class="text-danger" asp-validation-for="LastName"></span>
+    </div>    <br/>
+    <div>
+        <label>Mobile:</label>
+        <input asp-for="Mobile"/>
+        <span class="text-danger" asp-validation-for="LastName"></span>
+    </div>   <br/>  
+    <div>
+        <label>Title:</label>
+        <input asp-for="Title"/>
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>  <br/>
+    <div>
+        <label>Description:</label>
+        <textarea asp-for="Description"></textarea>
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div><br/>
+    <button value="send">send</button>
+</form>

@@ -1,0 +1,12 @@
+﻿using contactUs.web.Areas.Admin.ViewModels;
+using contactUs.web.ViewModels;
+
+namespace contactUs.web.Services.Interface;
+
+public interface IContactUsService
+{
+    bool creatlostco(FormContactUsViewModel frco);
+
+    List<ListContactusViewModel> list();
+
+}

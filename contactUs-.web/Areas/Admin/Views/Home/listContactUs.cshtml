@@ -1,0 +1,34 @@
+﻿@model List<contactUs.web.Areas.Admin.ViewModels.ListContactusViewModel>
+
+<style>
+    table,tr,th,td{
+        border: 2px solid hotpink;padding: 5px;
+    }
+</style>
+
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Mobile</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>SubmitDatetime</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.Email</td>
+            <td>@user.firstName</td>
+            <td>@user.LastName</td>
+            <td>@user.Mobile</td>
+            <td>@user.Title</td>
+            <td>@user.Description</td>
+            <td>@user.submitDateTime</td>
+        </tr>
+    }
+</table>
