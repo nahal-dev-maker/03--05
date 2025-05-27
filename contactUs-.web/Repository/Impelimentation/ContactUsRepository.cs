@@ -40,4 +40,20 @@ public class ContactUsRepository:IContactUsRepository
     {
      return  _db.userss.Any(u => u.Email == Email);
     }
+
+    public List<User> ListUser()
+    {
+       return _db.userss.ToList();
+    }
+
+    public User getUserById(int Id)
+    {
+     return   _db.userss.SingleOrDefault(u => u.Id == Id);
+    }
+
+    public void update(User user)
+    {
+        
+        _db.userss.Update(user);
+    }
 }

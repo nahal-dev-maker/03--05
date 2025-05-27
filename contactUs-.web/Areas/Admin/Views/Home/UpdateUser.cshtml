@@ -1,0 +1,47 @@
+﻿@model contactUs.web.Areas.Admin.ViewModels.UpdateUserViewModel
+
+
+
+<form asp-controller="Home" asp-action="UpdateUser" method="post">
+    
+    
+        <input type="hidden" asp-for="Id"/>
+
+    <div>
+        <label>email:</label>
+        <input asp-for="Email"/>
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div><br/>
+
+    <div>
+        <label>password:</label>
+        <input asp-for="password"/>
+        <span class="text-danger" asp-validation-for="password"></span>
+    </div><br/>
+
+    <div>
+        <label>firstname:</label>
+        <input asp-for="Firstname"/>
+        <span class="text-danger" asp-validation-for="Firstname"></span>
+    </div><br/>
+
+    <div>
+        <label>lastname:</label>
+        <input asp-for="Lastname"/>
+        <span class="text-danger" asp-validation-for="Lastname"></span>
+    </div><br/>
+
+    <div>
+        <label>mobile:</label>
+        <input asp-for="mobile"/>
+        <span class="text-danger" asp-validation-for="mobile"></span>
+    </div><br/>
+
+    <div>
+        <label>registerDatetime:</label>
+        <input asp-for="registerDatetime"/>
+    </div><br/>
+
+    <button> update</button>
+
+</form>

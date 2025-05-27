@@ -34,4 +34,60 @@ public class HomeController : AdminBaseController
 
     #endregion
 
+
+
+
+
+
+    #region LIstUser
+
+    [HttpGet]
+    public IActionResult ListUser()
+    {
+        var user=_contactUsService.ListUser();
+        return View(user);
+    }
+
+ 
+
+    #endregion
+
+
+    #region UpdateUser
+
+    [HttpGet]
+    public IActionResult UpdateUser(int Id)
+    {
+       var user= _contactUsService.getuserbyid(Id);
+        return View(user);
+    }
+
+    [HttpPost]
+    public IActionResult UpdateUser(ListUserViewModel listu)
+    {
+       var user= _contactUsService.updateuserr(listu);
+       return RedirectToAction("ListUser");
+        return View();
+    }
+
+    #endregion
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

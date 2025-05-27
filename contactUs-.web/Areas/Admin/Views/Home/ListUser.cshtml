@@ -1,0 +1,39 @@
+﻿@model List<contactUs.web.Areas.Admin.ViewModels.ListUserViewModel>
+
+
+<style>
+   tr,th,td {
+    border: 3px solid rebeccapurple;padding: 5px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>Password</th>
+        <th>mobile</th>
+        <th>registerDatetime</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.Email</td>
+            <td>@user.Firstname</td>
+            <td>@user.Lastname</td>
+            <td>@user.password</td>
+            <td>@user.mobile</td>
+            <td>@user.registerDatetime</td>
+            <td>
+                <button> <a href="https://localhost:44318/admin/home/Updateuser/@user.Id">update</a></button>
+            </td>
+        </tr>
+        
+        
+    }
+</table>

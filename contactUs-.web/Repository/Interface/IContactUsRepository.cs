@@ -12,8 +12,12 @@ public interface IContactUsRepository
     List<ListContactUs> list();
 
     bool getUserbyEmail(string Email);
-    
-    
-    
-    
+
+    List<User> ListUser();
+
+    User getUserById(int Id);
+
+    void update(User user );
+
+
 }
