@@ -1,6 +1,7 @@
 ﻿using contactUs.web.Context;
 using contactUs.web.Entities.User;
 using contactUs.web.Repository.Interface;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace contactUs.web.Repository.Impelimentation;
 
@@ -18,6 +19,11 @@ public class ContactUsRepository:IContactUsRepository
         _db.Contact.Add(listco);
     }
 
+    public void add(User user)
+    {
+        _db.userss.Add(user);
+    }
+
     public void save()
     {
         _db.SaveChanges();
@@ -28,5 +34,10 @@ public class ContactUsRepository:IContactUsRepository
        var user= _db.Contact.ToList();
        return user;
 
+    }
+
+    public bool getUserbyEmail(string Email)
+    {
+     return  _db.userss.Any(u => u.Email == Email);
     }
 }

@@ -1,0 +1,33 @@
+﻿@model contactUs.web.ViewModels.RegisterViewModel
+
+
+<form asp-controller="Account" asp-action="register" method="post">
+    
+    <div>
+        <label>ایمیل:</label>
+        <input asp-for="Email"/>
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div><br/> 
+    <div>
+        <label>نام:</label>
+        <input asp-for="Firstname"/>
+        <span class="text-danger" asp-validation-for="Firstname"></span>
+    </div><br/> 
+    <div>
+        <label>نام خانوادگی:</label>
+        <input asp-for="Lastname"/>
+        <span class="text-danger" asp-validation-for="Lastname"></span>
+    </div><br/> 
+    <div>
+        <label>پسوورد:</label>
+        <input asp-for="password"/>
+        <span class="text-danger" asp-validation-for="password"></span>
+    </div><br/> 
+    <div>
+        <label>موبایل:</label>
+        <input asp-for="mobile"/>
+        <span class="text-danger" asp-validation-for="mobile"></span>
+    </div><br/>
+    
+    <button>send</button>
+</form>

@@ -4,6 +4,7 @@ using contactUs.web.Repository.Impelimentation;
 using contactUs.web.Repository.Interface;
 using contactUs.web.Services.Interface;
 using contactUs.web.ViewModels;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace contactUs.web.Services.Impelimentation;
 
@@ -50,5 +51,32 @@ public class ContactUsService:IContactUsService
         }).ToList();
         
         
+    }
+
+   
+    
+    
+    public bool registerUser(RegisterViewModel register)
+    {
+       var usserr= _iContactUsRepository.getUserbyEmail(register.Email);
+
+       if (usserr) return false; 
+     
+           var user1 = new User()
+           {
+               Email = register.Email,
+               Firstname = register.Firstname,
+               Lastname = register.Lastname,
+               mobile = register.mobile,
+               password = register.password,
+            
+           };
+
+           _iContactUsRepository.add(user1);
+           _iContactUsRepository.save(); 
+       
+
+       return true;
+
     }
 }

@@ -12,4 +12,5 @@ public class ApplicationDbContext:DbContext
 
 
     public DbSet<ListContactUs> Contact { get; set; }
+    public DbSet<User> userss { get; set; }
 }

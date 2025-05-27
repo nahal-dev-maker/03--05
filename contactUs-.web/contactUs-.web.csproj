@@ -23,6 +23,7 @@
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Areas\Admin\Pages\Home\listContactUs.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Account\register.cshtml" />
     </ItemGroup>
 
     <ItemGroup>

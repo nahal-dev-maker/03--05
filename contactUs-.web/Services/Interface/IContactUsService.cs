@@ -9,4 +9,8 @@ public interface IContactUsService
 
     List<ListContactusViewModel> list();
 
+
+    
+    bool registerUser(RegisterViewModel register);
+
 }
