@@ -1,7 +1,6 @@
 using System.Diagnostics;
-using contactUs.web.Services.Impelimentation;
-using contactUs.web.Services.Interface;
-using contactUs.web.ViewModels;
+using ContactUs.bussins.Services.Interface;
+using ContactUs.dal.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace contactUs.web.Controllers;

@@ -1,7 +1,8 @@
-﻿using contactUs.web.Entities.User;
+﻿using ContactUs.dal.Entities.ListContactUs;
+using ContactUs.dal.Entities.User;
 using Microsoft.EntityFrameworkCore;
 
-namespace contactUs.web.Context;
+namespace ContactUs.dal.Context;
 
 public class ApplicationDbContext:DbContext
 {

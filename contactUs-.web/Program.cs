@@ -1,8 +1,8 @@
-using contactUs.web.Context;
-using contactUs.web.Repository.Impelimentation;
-using contactUs.web.Repository.Interface;
-using contactUs.web.Services.Impelimentation;
-using contactUs.web.Services.Interface;
+using ContactUs.bussins.Services.Impelimentation;
+using ContactUs.bussins.Services.Interface;
+using ContactUs.dal.Context;
+using ContactUs.dal.Repository.Impelimentation;
+using ContactUs.dal.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +12,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IContactUsRepository, ContactUsRepository>();
 builder.Services.AddScoped<IContactUsService, ContactUsService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {

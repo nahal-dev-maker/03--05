@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contactUs-.web", "contactUs-.web\contactUs-.web.csproj", "{5672C145-8511-455D-8E8B-06EDAD61702D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactUs.dal", "ContactUs.dal\ContactUs.dal.csproj", "{F5A55653-C29B-4622-A408-20C045DEDB6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactUs.bussins", "ContactUs.bussins\ContactUs.bussins.csproj", "{9B8FC1F4-5A49-4214-AB39-9F533018C948}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{5672C145-8511-455D-8E8B-06EDAD61702D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5672C145-8511-455D-8E8B-06EDAD61702D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5672C145-8511-455D-8E8B-06EDAD61702D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A55653-C29B-4622-A408-20C045DEDB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A55653-C29B-4622-A408-20C045DEDB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A55653-C29B-4622-A408-20C045DEDB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A55653-C29B-4622-A408-20C045DEDB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8FC1F4-5A49-4214-AB39-9F533018C948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8FC1F4-5A49-4214-AB39-9F533018C948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8FC1F4-5A49-4214-AB39-9F533018C948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8FC1F4-5A49-4214-AB39-9F533018C948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

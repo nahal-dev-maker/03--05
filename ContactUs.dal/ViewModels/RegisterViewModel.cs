@@ -1,13 +1,10 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace contactUs.web.Areas.Admin.ViewModels;
+namespace ContactUs.dal.ViewModels;
 
-public class UpdateUserViewModel
+public class RegisterViewModel
 {
-    
-    public int Id { get; set; }
-    
     [DisplayName("ایمیل")]
     [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
     [EmailAddress(ErrorMessage = "{0} وارد شده صحیح نمیباشد")]
@@ -32,5 +29,4 @@ public class UpdateUserViewModel
     [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
     [MaxLength(150,ErrorMessage = "{0} وارد شده نمیتواند بیش از 150 کاراکتر داشته باشد")]
     public string mobile { get; set; }
-    public DateTime registerDatetime { get; set; }
 }

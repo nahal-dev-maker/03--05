@@ -1,4 +1,4 @@
-﻿namespace contactUs.web.Areas.Admin.ViewModels;
+﻿namespace ContactUs.dal.ViewModels;
 
 public class ListContactusViewModel
 {

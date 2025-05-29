@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace contactUs.web.Areas.Controllers;
+namespace contactUs.web.Areas.Admin.Controllers;
 
 [Area("Admin")]
 

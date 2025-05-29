@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace contactUs.web.Entities.User;
+namespace ContactUs.dal.Entities.ListContactUs;
 
 public class ListContactUs
 {

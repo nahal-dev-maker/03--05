@@ -26,4 +26,12 @@
       <_ContentIncludedByDefault Remove="Pages\Account\register.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ContactUs.bussins\ContactUs.bussins.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Admin\ViewModels\" />
+    </ItemGroup>
+
 </Project>

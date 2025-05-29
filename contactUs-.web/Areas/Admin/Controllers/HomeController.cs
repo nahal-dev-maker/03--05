@@ -1,21 +1,24 @@
-﻿using contactUs.web.Areas.Admin.ViewModels;
-using contactUs.web.Context;
-using contactUs.web.Entities.User;
-using contactUs.web.Services.Interface;
+﻿using ContactUs.bussins.Services.Interface;
+using ContactUs.dal.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace contactUs.web.Areas.Controllers;
+namespace contactUs.web.Areas.Admin.Controllers;
 
 public class HomeController : AdminBaseController
 {
+    #region ctor
+
     private IContactUsService _contactUsService;
 
-    public HomeController(IContactUsService contactUsService)
+    private IUserService _userService;
+    public HomeController(IContactUsService contactUsService, IUserService userService)
     {
         _contactUsService = contactUsService;
+        _userService = userService;
     }
 
-
+    #endregion
+    
     public IActionResult Index()
     {
         return View();
@@ -33,18 +36,14 @@ public class HomeController : AdminBaseController
   
 
     #endregion
-
-
-
-
-
+    
 
     #region LIstUser
 
     [HttpGet]
     public IActionResult ListUser()
     {
-        var user=_contactUsService.ListUser();
+        var user=_userService.ListUser();
         return View(user);
     }
 
@@ -58,14 +57,14 @@ public class HomeController : AdminBaseController
     [HttpGet]
     public IActionResult UpdateUser(int Id)
     {
-       var user= _contactUsService.getuserbyid(Id);
+       var user= _userService.getuserbyid(Id);
         return View(user);
     }
 
     [HttpPost]
     public IActionResult UpdateUser(ListUserViewModel listu)
     {
-       var user= _contactUsService.updateuserr(listu);
+       var user= _userService.updateuserr(listu);
        return RedirectToAction("ListUser");
         return View();
     }

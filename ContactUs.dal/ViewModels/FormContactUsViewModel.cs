@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace contactUs.web.ViewModels;
+namespace ContactUs.dal.ViewModels;
 
 public class FormContactUsViewModel
 {

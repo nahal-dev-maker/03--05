@@ -1,5 +1,6 @@
-﻿using contactUs.web.Services.Interface;
-using contactUs.web.ViewModels;
+﻿using ContactUs.bussins.Services.Interface;
+using ContactUs.dal.Repository.Interface;
+using ContactUs.dal.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace contactUs.web.Controllers;
@@ -8,11 +9,11 @@ public class AccountController : Controller
 {
     #region Ctor
 
-    private IContactUsService _contactUsService;
 
-    public AccountController(IContactUsService contactUsService)
+    private IUserService _userService;
+    public AccountController(IContactUsService contactUsService,  IUserService userService)
     {
-        _contactUsService = contactUsService;
+        _userService = userService;
     }
     
 
@@ -30,7 +31,7 @@ public class AccountController : Controller
     [HttpPost]
     public IActionResult register(RegisterViewModel reg)
     {
-    _contactUsService.registerUser(reg);
+    _userService.registerUser(reg);
     return RedirectToAction("index", "Home");
         return View();
     }
